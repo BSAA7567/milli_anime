@@ -11,13 +11,79 @@
                 min-width: 100%;
                 min-height: 100%;
             }
+            #vidtop-content {
+                top: 0;
+                color: #fff;
+            }
+            .vid-info {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 33%;
+                background: rgba(0,0,0,0.3);
+                color: #fff;
+                padding: 1rem;
+                font-family: Avenir, Helvetica, sans-serif;
+            }
+            .vid-info h1 {
+                font-size: 4rem;
+                font-weight: 700;
+                margin-top: 0;
+                line-height: 1.2;
+            }
+            .vid-info p {
+                font-size: 2rem;
+            }
+            @media (min-aspect-ratio: 16/9) {
+                .video-foreground {
+                    height: 300%;
+                    top: -100%;
+                }
+            }
+            @media (max-aspect-ratio: 16/9) {
+                .video-foreground {
+                    width: 300%;
+                    left: -100%;
+                }
+            }
+            @media all and (max-width: 600px) {
+                .vid-info {
+                    width: 50%;
+                    padding: 0.5rem;
+                }
+                .vid-info h1 {
+                    margin-bottom: 0.2rem;
+                }
+            }
+            @media all and (max-width: 500px) {
+                .vid-info .acronym {
+                    display: none;
+                }
+            }
         </style>
         <title>밀리 애니다 애니</title>
     </head>
     <body>
         <iframe
             id="myVideo"
-            src="https://www.youtube.com/embed/I7XselTvzTc?autoplay=1&mute=1">
-        </iframe>
-    </body>
-</html>
+            src="https://www.youtube.com/embed/I7XselTvzTc?autoplay=1&mute=1"></iframe>
+            
+        <div id="vidtop-content">
+            <div class="vid-info">
+                <h1>애니화 발표 후</h1>
+                <p id="demo">
+                    <script>
+                        var myVar = setInterval(myTimer, 1000);
+
+                        function myTimer() {
+                            var d = new Date();
+                            document
+                                .getElementById("demo")
+                                .innerHTML = d.toLocaleTimeString();
+                        }
+                    </script>
+                    <p>만큼 흘렀나노
+                    </div>
+                </div>
+            </body>
+        </html>
