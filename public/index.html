@@ -66,7 +66,7 @@
     <body>
         <iframe
             id="myVideo"
-            src="https://www.youtube.com/embed/I7XselTvzTc?autoplay=1&mute=1"></iframe>
+            src="https://www.youtube.com/embed/VAIx8aNlpXU?autoplay=1&mute=1"></iframe>
 
         <div id="vidtop-content">
             <div class="vid-info">
@@ -85,14 +85,16 @@
                             var distance = Dt.id - now;
                             // Time calculations for days, hours, minutes and seconds
                             var days = Math.floor(distance / (1000 * 60 * 60 * 24)) + 1;
-                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) + 1;
+                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)) +
+                                    1;
                             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
                             // Display the result in the element with id="demo"
                             document
                                 .getElementById("demo")
-                                .innerHTML = Math.abs(days) + "일 " + Math.abs(hours) + "시간 " + Math.abs(minutes) +
-                                        "분 " + Math.abs(seconds) + "초"
+                                .innerHTML = Math.abs(days) + "일 " + Math.abs(hours) + "시간 " + Math.abs(
+                                    minutes
+                                ) + "분 " + Math.abs(seconds) + "초"
 
                             // If the count down is finished, write some text
                             if (distance < 0 && Check < Word.length) 
